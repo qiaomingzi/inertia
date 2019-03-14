@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>弹动小球使用演示</title>
+    <link rel="stylesheet" href="https://qidian.gtimg.com/qdm/css/common.26544.css">
+    <link rel="stylesheet" href="https://qidian.gtimg.com/qdm/css/index/index.926e7.css">
+    <style>
+        .ball {
+            position: fixed;
+            line-height: 2.75rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            padding: .5rem;
+            text-align: center;
+            border-radius: 99px;
+            color: #fff;
+            /*border: 1rem solid transparent;*/
+            background-color: #ed424b;
+            background-clip: padding-box;
+            text-decoration: none;
+            top: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <aside id="aside" class="aside" data-is-bind-scroll="true"><i id="asideOverlay" class="aside-overlay" role="button"></i>
+        <div class="aside-content">
+            <div class="module module-history">
+                <div class="module-header"><h3 class="module-title">最近阅读</h3></div>
+                <div id="recentlyRead" class="module-main scrollable"></div>
+                <div class="module-footer">
+                    <div class="jsGuestWrapper" style=""><a href="/bookshelf/my" class="btn-primary jsLogin" data-size="10">登录去书架</a>
+                        <!-- <p class="module-footer-txt">新用户登录送新手礼包</p> --></div>
+                    <div class="jsUserWrapper" hidden="" style="display: none;"><a href="/bookshelf/my" class="btn-primary"
+                                                                                   data-size="10">我的书架</a></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <div style="height: 2000px;">滚动测试，PC浏览器访问，需打开控制台进入移动模式。</div>
+
+    <!--<a href="javascript:" id="ball" class="ball">拖我</a>
+    <script src="../src/Inertia.js"></script>
+    <script>
+        new Inertia(document.getElementById('ball'));
+    </script>-->
+    <a href="#&amp;aside" id="asideTrigger" class="home-recent-read" data-rel="aside" data-l1="14" data-eid="mqd_A50"
+       role="button" aria-haspopup="true" style="visibility: visible;"><span class="btn-primary-circle">最近阅读</span>
+    </a>
+
+    <script data-ignore="true" src="./LBF.js?max_age=31536000"></script>
+    <script data-ignore="true" src="./index.js"></script>
+    <script data-ignore="true" src="./_popupAD.9e939.js"></script>
+    <script>
+
+        //全局配置
+        var g_data = {};
+        // LBF 配置
+       /* LBF.config({
+            paths: {
+                qdm: './qdm',
+                qd_jssdk: './qd_jssdk',
+                common: './common/1.0.0'
+            },
+            vars: {
+                theme: '//qidian.gtimg.com/qdm/css',
+            },
+            combo: true,
+            debug: false,
+            comboExcludes: /jssdk/, // 不能 combo jssdk
+        });*/
+        LBF.use(['lib.Zepto',  'qdm/js/homepage/index.88d1c.js'], function ($, page) {
+            page.init();
+        });
+    </script>
+</body>
+</html>
