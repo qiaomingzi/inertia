@@ -35,3 +35,7 @@ new Inertia(ele, option);
 
 ## 补充说明
 有时候希望元素不是紧靠边缘而是留有间隙，可以使用透明边框，或者标签嵌套使用padding等CSS属性控制。
+
+
+
+![](./images/demo.gif)
